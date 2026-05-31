@@ -14,9 +14,7 @@ export default function QRPage({
   const [qrImage, setQrImage] = useState("");
   const [id, setId] = useState<string>("");
 
-  const baseUrl =
-    process.env.NEXT_PUBLIC_BASE_URL ||
-    "http://localhost:3000";
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL!;
 
   useEffect(() => {
     async function resolveParams() {
